@@ -1,0 +1,12 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "grunt-doctor-md": "^0.1.1",
+    "grunt-md2html": "^0.2.1"
+  }
+}
