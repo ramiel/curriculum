@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     },
     default: {
       files: [{
-        src: ['src/**/*.md'],
+        src: ['README.md'],
         dest: 'build/index2.html'
       }]
     },
@@ -35,6 +35,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
 
   // Default task.
-  grunt.registerTask('default', ['doctor:general','md2html']);
+  grunt.registerTask('default', ['md2html']);
 
 };
