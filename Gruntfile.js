@@ -36,8 +36,8 @@ module.exports = function(grunt) {
     },
     default: {
       files: [{
-        src: ['README.md'],
-        dest: 'build/curriculum_fabrizio_ruggeri.html'
+        src: ['src/*.md'],
+        dest: 'build/index.html'
       }],
       options: {
         layout: 'resources/layout.html',
