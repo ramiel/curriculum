@@ -1,0 +1,32 @@
+$font-stack:    source-sans-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bg-color: #333;
+
+$primary-color: #fff;
+$primary-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+$secondary-color: rgba(255,255,255,.5);
+$secondary-shadow: $primary-shadow;
+
+$third-color:#408b55;
+
+
+html, body{
+	background-color: $bg-color;
+}
+
+body{
+	color: $primary-color;
+	text-shadow: $primary-shadow;
+
+	strong {
+		color: $secondary-color;
+		text-shadow: $secondary-shadow;
+		font-size: 1.1em;
+	}
+
+	em{
+		color:$third-color;
+	}
+
+	a,a:hover{text-decoration: none;}
+}

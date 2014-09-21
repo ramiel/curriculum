@@ -5,13 +5,27 @@ module.exports = function(grunt) {
   grunt.initConfig({
 // Metadata.
   pkg: grunt.file.readJSON('package.json'),
-  doctor: {
-    options: {
-      'template': 'node_modules/'
-    },
-    general: {
-      files: {
-        'build/index.html': ['src/*.md']
+
+  copy: {
+    default: {
+      files: [
+        // includes files within path
+        {expand: true,  cwd: 'bower_components/bootstrap/dist/',src: ['fonts/**'], dest: 'build/'},
+        {expand: true,  cwd: 'bower_components/bootstrap/dist/css',src: ['*'], dest: 'build/css/'},
+        {expand: true,  cwd: 'bower_components/bootstrap/dist/js',src: ['bootstrap.min.*'], dest: 'build/js/'},
+        {expand: true,  cwd: 'bower_components/jquery/dist/',src: ['jquery.min.*'], dest: 'build/js/'},
+      ]
+    }
+  },
+
+
+  sass: {                              // Task
+    default: {                            // Target
+      options: {                       // Target options
+        style: 'expanded'
+      },
+      files: {                     
+        'build/style.css': 'resources/css/style.scss',
       }
     }
   },
@@ -23,18 +37,29 @@ module.exports = function(grunt) {
     default: {
       files: [{
         src: ['README.md'],
-        dest: 'build/index2.html'
-      }]
+        dest: 'build/curriculum_fabrizio_ruggeri.html'
+      }],
+      options: {
+        layout: 'resources/layout.html',
+        basePath: 'build/',
+        templateData : {
+          title: "Fabrizio Ruggeri - Resume"
+        }
+      },
     },
   },
 
 });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-doctor-md');
   grunt.loadNpmTasks('grunt-md2html');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('default', ['md2html']);
+  grunt.registerTask('default', ['resources', 'compile_markdown']);
+  grunt.registerTask('compile_markdown', ['md2html:default']);
+  grunt.registerTask('compile_styles', ['sass:default']);
+  grunt.registerTask('resources',['copy:default', 'compile_styles'])
 
 };
