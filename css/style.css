@@ -6,6 +6,24 @@ body {
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
+body h1 {
+  clear: both;
+}
+body h2 {
+  clear: both;
+}
+body h3 {
+  clear: both;
+}
+body h4 {
+  clear: both;
+}
+body h5 {
+  clear: both;
+}
+body h6 {
+  clear: both;
+}
 body strong {
   color: rgba(255, 255, 255, 0.5);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -16,6 +34,12 @@ body em {
 }
 body a, body a:hover {
   text-decoration: none;
+}
+body img.picture {
+  float: left;
+  margin-right: 30px;
+  width: 150px;
+  height: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
