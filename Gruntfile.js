@@ -5,7 +5,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
 // Metadata.
   pkg: grunt.file.readJSON('package.json'),
-  connection: grunt.file.readJSON('connection.json'),
+  connection: grunt.file.readJSON('.ftppass'),
+
+  clean: {
+    default: ["build/**/*.*", "!build/.empty"],
+  },
 
   copy: {
     default: {
@@ -27,7 +31,7 @@ module.exports = function(grunt) {
         style: 'expanded'
       },
       files: {                     
-        'build/style.css': 'resources/css/style.scss',
+        'build/css/style.css': 'resources/css/style.scss',
       }
     }
   },
@@ -61,18 +65,38 @@ module.exports = function(grunt) {
     },
   },
 
+  ftpush: {
+    production: {
+      auth: {
+        host: '<%= connection.host %>',
+        port: '<%= connection.port %>',
+        authKey: 'secret'
+      },
+      src: 'build/',
+      dest: '/public_html/curriculum/',
+      exclusions : ['.empty'],
+      keep: ['cgi-bin'],
+      simple: false,
+      useList: false
+    }
+  }
+
 });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-md2html');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-spell');
+  grunt.loadNpmTasks('grunt-ftpush');
+
   // Default task.
   grunt.registerTask('default', ['build']);
   grunt.registerTask('compile_markdown', ['md2html:default']);
   grunt.registerTask('compile_styles', ['sass:default']);
   grunt.registerTask('resources',['copy:default', 'compile_styles']);
-  grunt.registerTask('build',['resources', 'spell', 'compile_markdown']);
+  grunt.registerTask('build',['clean', 'resources', 'spell', 'compile_markdown']);
+  grunt.registerTask('publish',['build', 'ftpush:production'])
 
 };
