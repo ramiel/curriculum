@@ -32,3 +32,5 @@ build/*
 
 bower_components
 .sass-cache
+connection.json
+.sublime-grunt.cache

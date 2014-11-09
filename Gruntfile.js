@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 // Metadata.
   pkg: grunt.file.readJSON('package.json'),
+  connection: grunt.file.readJSON('connection.json'),
 
   copy: {
     default: {
@@ -14,6 +15,7 @@ module.exports = function(grunt) {
         {expand: true,  cwd: 'bower_components/bootstrap/dist/css',src: ['*'], dest: 'build/css/'},
         {expand: true,  cwd: 'bower_components/bootstrap/dist/js',src: ['bootstrap.min.*'], dest: 'build/js/'},
         {expand: true,  cwd: 'bower_components/jquery/dist/',src: ['jquery.min.*'], dest: 'build/js/'},
+        {expand: true,  cwd: 'resources',src: ['img/**'], dest: 'build/'},
       ]
     }
   },
@@ -26,6 +28,16 @@ module.exports = function(grunt) {
       },
       files: {                     
         'build/style.css': 'resources/css/style.scss',
+      }
+    }
+  },
+
+  spell: {
+    default:{
+      src: ['src/*'],
+      options: {
+        lang: 'en',
+        ignore: []
       }
     }
   },
@@ -43,7 +55,7 @@ module.exports = function(grunt) {
         layout: 'resources/layout.html',
         basePath: 'build/',
         templateData : {
-          title: "Fabrizio Ruggeri - Resume"
+          title: "Fabrizio Ruggeri - Curriculum"
         }
       },
     },
@@ -55,11 +67,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
-
+  grunt.loadNpmTasks('grunt-spell');
   // Default task.
-  grunt.registerTask('default', ['resources', 'compile_markdown']);
+  grunt.registerTask('default', ['build']);
   grunt.registerTask('compile_markdown', ['md2html:default']);
   grunt.registerTask('compile_styles', ['sass:default']);
-  grunt.registerTask('resources',['copy:default', 'compile_styles'])
+  grunt.registerTask('resources',['copy:default', 'compile_styles']);
+  grunt.registerTask('build',['resources', 'spell', 'compile_markdown']);
 
 };

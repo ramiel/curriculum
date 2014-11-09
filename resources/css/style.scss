@@ -18,6 +18,12 @@ body{
 	color: $primary-color;
 	text-shadow: $primary-shadow;
 
+	@for $index from 1 through 6 {
+	  h#{$index}{
+	    clear: both;
+	  }
+	}
+
 	strong {
 		color: $secondary-color;
 		text-shadow: $secondary-shadow;
@@ -29,4 +35,12 @@ body{
 	}
 
 	a,a:hover{text-decoration: none;}
+
+	img.picture {
+		float:left;
+		margin-right: 30px;
+		width: 150px;
+		height: 150px;
+	}
 }
+
