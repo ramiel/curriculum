@@ -29,3 +29,9 @@ node_modules
 
 build/*
 !build/.empty
+
+bower_components
+.sass-cache
+connection.json
+.sublime-grunt.cache
+.ftppass
