@@ -1,4 +1,4 @@
-$font-stack:    source-sans-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-stack: 'Lato', 'Helvetica Neue', Arial, sans-serif;
 $bg-color: #333;
 
 $primary-color: #fff;
@@ -12,6 +12,7 @@ $third-color:#408b55;
 
 html, body{
 	background-color: $bg-color;
+	font-family:$font-stack;
 }
 
 body{
