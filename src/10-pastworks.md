@@ -4,7 +4,7 @@
 
     Worked in [3logic mk](http://www.3logic.it). I started as junior developer and became project leader and senior developer. I've worked mainly on  *web stuff* but also on sensor/hardware interfaces
 
-    -  Projects
+    -  Remarkable projects
 
     **SmartHealth** : Totally distributed health related data analysis platform. The project let you describe your sensors and analysis workflow and run in an environment powered by *Node.js*, *Cassandra*, *Rabbit MQ*, *Hadoop*
 
@@ -13,7 +13,7 @@
 
     **Winmedical**: Medical real-time monitoring software developed for [winmedical](http://www.winmedical.com/), it's now deployed in several hospitals all around the world, controlling patients in their wards. Based on *Node.js*, *CakePhp*, *Mongo DB* and *socket.io* (A former version of the gui is shown on <https://www.youtube.com/watch?v=onMuIOySY0A>)
 
-    **Communication**: I managed projects for a big telecommunication company.[MISSING]
+    <!-- **Communication**: I managed projects for a big telecommunication company.[MISSING] -->
 
 - From 2010 until now
 

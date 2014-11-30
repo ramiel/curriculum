@@ -1,4 +1,4 @@
-## Who am I
+## Who I am
 <img src="img/fabri-3avatar.jpg" alt="Fabrizio's picture" class="picture" />
 
 My name is Fabrizio Ruggeri. I live in Europe working as (web) developer.
