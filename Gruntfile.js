@@ -32,6 +32,7 @@ module.exports = function(grunt) {
       },
       files: {                     
         'build/css/style.css': 'resources/css/style.scss',
+        'build/css/print.css': 'resources/css/print.scss',
       }
     }
   },
@@ -97,6 +98,7 @@ module.exports = function(grunt) {
   grunt.registerTask('compile_styles', ['sass:default']);
   grunt.registerTask('resources',['copy:default', 'compile_styles']);
   grunt.registerTask('build',['clean', 'resources', 'spell', 'compile_markdown']);
+  grunt.registerTask('build_fast',['clean', 'resources', 'compile_markdown']);
   grunt.registerTask('publish',['build', 'ftpush:production'])
 
 };
