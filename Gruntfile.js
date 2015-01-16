@@ -1,11 +1,24 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  var connection;
+  try{
+    connection = grunt.file.readJSON('.ftppass');
+  }catch(ex){
+    connection = {
+      host : 'dump_host',
+      port: '<%= connection.port %>',
+      authKey: 'use the auth key defined in this configuration instead of password',
+      user: 'username',
+      password: 'password'
+    };
+  }
+
   // Project configuration.
   grunt.initConfig({
 // Metadata.
   pkg: grunt.file.readJSON('package.json'),
-  connection: grunt.file.readJSON('.ftppass'),
+  connection: connection,
 
   clean: {
     default: ["build/**/*.*", "!build/.empty"],
@@ -32,6 +45,7 @@ module.exports = function(grunt) {
       },
       files: {                     
         'build/css/style.css': 'resources/css/style.scss',
+        'build/css/print.css': 'resources/css/print.scss',
       }
     }
   },
@@ -97,6 +111,7 @@ module.exports = function(grunt) {
   grunt.registerTask('compile_styles', ['sass:default']);
   grunt.registerTask('resources',['copy:default', 'compile_styles']);
   grunt.registerTask('build',['clean', 'resources', 'spell', 'compile_markdown']);
-  grunt.registerTask('publish',['build', 'ftpush:production'])
+  grunt.registerTask('build_fast',['clean', 'resources', 'compile_markdown']);
+  grunt.registerTask('publish',['build', 'ftpush:production']);
 
 };
