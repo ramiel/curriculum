@@ -6,4 +6,4 @@ Contacts:
  - **email**: fabrizio.ruggeri [at] gmail.com
  - **Website**: <http://www.ramielcreations.com/>
  - **G+**: [profile](https://plus.google.com/u/0/+FabrizioRuggeri/)
- - **LinkedIn**: [profile](https://www.linkedin.com/pub/fabrizio-ruggeri/62/b61/7aa)
+ - **LinkedIn**: [profile](https://www.linkedin.com/in/fabrizioruggeri)
