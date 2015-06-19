@@ -22,8 +22,12 @@
     Web development with [the shark project](http://thesharkproject.com/)
 
 
-- From 2013 until now
+- From 2013 until 2015
     
     I've worked as system administrator at *Dipartimento di Agraria, University of Pisa*
+
+- From 2015 until now
+
+    I was backend senior developer at [Photobox](http://www.photobox.com) handling product creation rest service using *Node.js*, *Mongo DB*, *PostgresSQL*.
 
 My work nowdays consists into *direct the development team*, *review* and *organize* their code and codebase. Like counseling I review third-part code for an IT company when code is wrote for wordpress or, generically, in PHP or for complex *javascript* application.
