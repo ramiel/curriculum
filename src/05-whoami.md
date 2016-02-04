@@ -5,5 +5,5 @@ My name is Fabrizio Ruggeri. I live in Europe working as (web) developer.
 Contacts:
  - **email**: fabrizio.ruggeri [at] gmail.com
  - **Website**: <http://www.ramielcreations.com/>
- - **G+**: [profile](https://plus.google.com/u/0/+FabrizioRuggeri/)
+ - **G+**: [profile](https://plus.google.com/+FabrizioRuggeri/)
  - **LinkedIn**: [profile](https://www.linkedin.com/pub/fabrizio-ruggeri/62/b61/7aa)
