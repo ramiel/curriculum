@@ -1,6 +1,6 @@
 ## Where I've worked
 
-- From 2009 until now
+- From 2009 until 2014
 
     Worked in [3logic mk](http://www.3logic.it). I started as junior developer and became project leader and senior developer. I've worked mainly on  *web stuff* but also on sensor/hardware interfaces
 
