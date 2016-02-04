@@ -7,12 +7,13 @@ module.exports = function(grunt) {
   }catch(ex){
     connection = {
       host : 'dump_host',
-      port: '<%= connection.port %>',
+      port: 21,
       authKey: 'use the auth key defined in this configuration instead of password',
       user: 'username',
       password: 'password'
     };
   }
+  console.log(connection)
 
   // Project configuration.
   grunt.initConfig({
@@ -113,5 +114,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build',['clean', 'resources', 'spell', 'compile_markdown']);
   grunt.registerTask('build_fast',['clean', 'resources', 'compile_markdown']);
   grunt.registerTask('publish',['build', 'ftpush:production']);
+  grunt.registerTask('publish_fast',['ftpush:production']);
 
 };

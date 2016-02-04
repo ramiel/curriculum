@@ -1,0 +1,8 @@
+{
+  "host" : "FTP host",
+  "port": 21,
+  "secret":{
+    "username": "username",
+    "password": "password"
+  }
+}
