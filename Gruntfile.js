@@ -13,7 +13,6 @@ module.exports = function(grunt) {
       password: 'password'
     };
   }
-  console.log(connection)
 
   // Project configuration.
   grunt.initConfig({
