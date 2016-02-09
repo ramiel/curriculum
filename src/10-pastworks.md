@@ -9,9 +9,9 @@
     **SmartHealth** : Totally distributed health related data analysis platform. The project let you describe your sensors and analysis workflow and run in an environment powered by *Node.js*, *Cassandra*, *Rabbit MQ*, *Hadoop*
 
     **Automotive**: In these years we designed and developed a lot of web for a *famous italian automotive company*.
-    A journalist portal, street-car line presentation, site of services for car owners and other. Developed mainly using *Wordpress*, this websites often have to support million of concurrent visitors (like in new *F1 car presentation*). Deployed on *Amazon AWS* I often control deployment architecture.
+    A journalist portal, street-car line presentation, site of services for car owners and other. Developed mainly using *Wordpress*, this websites often have to support million of concurrent visitors (like in new *F1 car presentation*). Deployed on *Amazon AWS* I've often controlled deployment architecture.
 
-    **Winmedical**: Medical real-time monitoring software developed for [winmedical](http://www.winmedical.com/), it's now deployed in several hospitals all around the world, controlling patients in their wards. Based on *Node.js*, *CakePhp*, *Mongo DB* and *socket.io* (A former version of the gui is shown on [this video](https://www.youtube.com/watch?v=onMuIOySY0A))
+    **Winmedical**: Medical real-time monitoring software developed for [winmedical](http://www.winmedical.com/), it's now deployed in several hospitals all around the world, controlling patients in their wards. Based on *Node.js*, *CakePhp*, *Mongo DB* and *socket.io* (A former version of the gui is shown on [this video](https://youtu.be/Mf0xYl5WjRY))
 
     <!-- **Communication**: I managed projects for a big telecommunication company.[MISSING] -->
 

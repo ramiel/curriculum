@@ -1,1 +1,1 @@
-# Curriculum vitae _Fabrizio Ruggeri_
+# Curriculum vitae _Fabrizio Ruggeri_ <span class="pedix hide_print">([pdf](FabrizioRuggeri-curriculum.pdf))</span>
