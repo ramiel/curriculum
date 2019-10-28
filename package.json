@@ -3,7 +3,11 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.5"
+    "grunt": "~0.4.5",
+    "grunt-cli": "^1.3.2"
+  },
+  "scripts": {
+    "build": "grunt build && cp \"Fabrizio Ruggeri - Curriculum.pdf\" build/FabrizioRuggeri-curriculum.pdf"
   },
   "repository": "https://github.com/ramiel/curriculum",
   "dependencies": {
