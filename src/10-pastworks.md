@@ -15,7 +15,7 @@
 
     <!-- **Communication**: I managed projects for a big telecommunication company.[MISSING] -->
 
-- From 2010 until now
+- Around 2010
 
     Web development with [obsidianart](http://www.obsidianart.com/wp/)
     
@@ -26,8 +26,15 @@
     
     I've worked as system administrator at *Dipartimento di Agraria, University of Pisa*
 
-- From 2015 until now
+- From 2015 until 2018
 
-    I was backend senior developer at [Photobox](http://www.photobox.com) handling product creation rest service using *Node.js*, *Mongo DB*, *PostgresSQL*.
+    Covered the role of senior backend developer at [Photobox](http://www.photobox.com) handling product creation rest service using *Node.js*, *Mongo DB*, *PostgresSQL*. 
 
+    Covered the role of senior full-stack developer at [PrestaShop](https://www.prestashop.com) designing a SaaS product. Worked with *React*, *GraphQL* and others.
+
+- From 2017 until now
+
+    I am... [TODO] Hypersay experience
+
+[TODO] Review next part
 My work nowdays consists into *direct the development team*, *review* and *organize* their code and codebase. Like counseling I review third-part code for an IT company when code is wrote for wordpress or, generically, in PHP or for complex *javascript* application.
